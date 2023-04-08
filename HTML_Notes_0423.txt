@@ -1,0 +1,418 @@
+1 page source & inspect
+2 index.html .htm
+
+3 !
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <pre>Hello World! 
+        Lets Go</pre>
+    </h1>
+    <!-- <div><ul><li></li>
+    <li></li>
+    <li></li></ul></div> -->
+</body>
+</html>
+
+/*op
+Hello World! 
+        Lets Go
+*/
+
+4 after formatting with prettier -> right click format with
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>
+      <pre>
+Hello World! 
+        Lets Go</pre
+      >
+    </h1>
+    <!-- <div><ul><li></li>
+    <li></li>
+    <li></li></ul></div> -->
+  </body>
+</html>
+
+5 comment
+<!-- comment -->
+<!-- a
+b
+c
+ -->
+
+6 html is not case sensitive 
+
+7 anchor tag
+<!-- blank on new tab , self/parent on same tab -->
+    <a href="https://open.spotify.com/collection/tracks" target="_blank">spotify</a>
+    <br>
+    <a href="https://open.spotify.com/collection/tracks" target="_parent">spotify</a>
+    <br>
+<!-- all files in same folder can be accessed directly -->
+    <a href="kvk2.html" target="_blank"> k2 </a>
+    <!-- <a href="/kvk2.html" target="_blank"> k2 </a> -->
+<!-- ../ to move to parent folder -->
+    <br>
+<!-- im is another folder present in same folder as html file -->
+    <a href="im/im2/Pan.pdf" target="_blank" >img</a>
+
+8 image with alt
+    <img src="https://5.imimg.com/data5/WA/NV/LI/SELLER-52971039/apple-indian-500x500.jpg" alt="apple">
+
+9 bold italic underline big small
+
+<p>Lorem ipsum dolor <b>sit amet </b>consectetur <i>adipisicing elit. Sequi consectetur suscipit totam amet perferendis, tempora </i>maxime <u>assumenda fuga </u>voluptatibus <big>provident in quibusdam mollitia id velit odit illum placeat.</big> Provident <small>nemo commodi itaque similique deserunt </small>sunt  molestiae?</p>
+
+10 <hr> horizontal rule
+
+11 subscript & superscript
+    <p>H<sub>2</sub>O</p>
+    
+    <p>3<sup>2</sup>=9</p>
+
+12 pre and p
+<!-- pre keeps given spaces & lines  -->
+hi   kams
+hi kams
+
+13 
+<body>
+    <header></header>
+    <main></main>
+    <footer></footer>
+    <section></section>
+    <article></article>
+    <aside></aside>
+    <!-- ad contents -->
+
+    <div></div>
+    <!-- block elements so it takes full width ,group elements so that we can modify all at once -->
+    <span></span>
+    <!-- inline elements so it takes only width needed -->
+</body>
+
+14 lists
+<!-- unordered list , list item . shortcut ul>li*3 -->
+	<ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- <ul type="none">  default-disc,circle,square,none -->
+    <hr>
+<!-- ordered list. attribute type="1|A|a|I|i" bydefault 1 -->
+    <ol type="i">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+<!-- 7.app 
+	8.bpp
+	 9.cpp -->
+    <ol type="1" start="7">
+      <li>app</li>
+      <li>bpp</li>
+      <li>cpp</li>
+    </ol>
+
+15 Table
+<!-- row , header , data -->
+    <table>
+
+      <caption>Table about name place</caption>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+                    <!-- <th colspan="2">Name</th> -->
+          <th>Place</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>Kamal</td>
+          <td>Mumbai</td>
+        </tr>
+        <tr>
+          <td>Rich</td>
+          <td>Surat</td>
+        </tr>
+        <tr>
+          <td>bos</td>
+          <td>bhuj</td>
+        </tr>
+      </tbody>
+      
+    </table>
+<!-- tr>th+tr -->
+      <tr>
+        <th></th>
+        <tr></tr>
+      </tr>
+
+16 Form
+    <form action="/action.php">
+      <input type="text" placeholder="Type Man">
+      <br><br>
+      <input type="password" placeholder="Type Hidden">
+      <br><br>
+<!-- if we give label then by clicking classXI also it will be filled -->
+      <label for="101">
+        <input type="radio" value="ClassXI" name="Class" id="101">ClassXI
+      </label>
+
+      <label for="102">
+        <input type="radio" value="ClassXII" name="Class" id="102">ClassXII
+      </label>
+      <br><br>
+<!-- radio-any one, checkbox-multiple, select-dropdown, text, password, textarea, submit -->
+      <label for="103">
+        <input type="checkbox" name="Maths" id="103">Maths
+      </label>
+
+      <label for="104">
+        <input type="checkbox" name="Chem" id="104">Chem
+      </label>
+
+      <label for="105">
+        <input type="checkbox" name="Physics" id="105">Physics
+      </label>
+      <br><br>
+
+      <select name="city" id="1000">
+        <option value="Z">Select City</option>
+        <option value="A">Ahmedabad</option>
+        <option value="C">Chennai</option>
+        <option value="B">Bangalore</option>
+
+      </select>
+
+      <br><br>
+      <textarea name="feedback" id="106" placeholder="plz Give your Feedback" rows="5" cols="50" ></textarea>
+      <br><br>
+
+      <input type="submit" value="submit">
+      <br><br>
+
+    </form>
+
+<!-- a2 -->
+● For "button", "reset", and "submit" : It defines the text on the button 
+● For "text", "password", and "hidden" : It defines the initial (default) value of the input field 
+● For "checkbox", "radio", "image" - it defines the value associated with the input (It is also the value that is sent on submit)
+
+The name attribute is a compulsory attribute for input tag in a form. Without this attribute, this form element won't be submitted or, in other words would not be sent to the server.
+because data is sent in name:value pair 
+
+The label is tied to input element by giving the "id" attribute of the input element the same value as the label's "for" attribute.
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<p>Choose your favorite Web language:</p>
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+
+http://127.0.0.1:5500/ks.php?favp1=Virat&favp2=Ms
+<!-- method="get|post" -->
+get bydefault appends name value at end of url
+post adds in form
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+alternative for select. input's list attribute must be same as datalist's id
+<input list="browsers" name="MyBrowser">
+<datalist id="browsers" >
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+17 Display websites over website
+    <iframe height="500" width="700" src="https://www.wikipedia.org/" frameborder="20"></iframe>
+
+18 video
+    <video width="500" height="500" src="/WIN_20201218_09_35_42_Pro.mp4" controls loop autoplay>yt</video>
+
+19 mark-highlight, ins-insert with underline,q-make text in " ",del/s-strike out
+
+    <p>Lorem ipsum <mark>dolor sit</mark> amet, <ins>kams</ins>consectetur adipisicing elit. Dolor <q>deserunt odio</q> placeat <del>saepe</del> provident quisquam doloribus <s>ut cumque!</s> Odio, itaque.</p>
+
+20 class name & id are case sensitive
+
+21 Internal links on same page
+    <p id="start">hello
+      <div>
+        welcome
+      </div>
+    </p>
+    <a href="#start">go to start</a>
+
+22 reset & required
+      <input type="reset" value="reset">
+      <input type="password" placeholder="Type Hidden" required>
+      <!-- compulsory to fill to submit form else popup field mandatory -->
+
+23 bydefault checked
+        <input type="checkbox" name="Maths" id="103" checked>Maths
+
+24 size will show 2 options at a time  
+multiple allows to select multiple options from dropdown by (control+select)
+selected attribute to select bydefault (default 1st option is selected)
+      <select name="city" id="1000" size="2">
+      <select name="city" id="1000" multiple>
+        <option value="B" selected>Bangalore </option>
+
+25 fieldset & legend
+      <fieldset>
+        <legend> Details</legend>
+          <input type="text" value="Type plz Man">
+          <br><br>
+          <input type="password" placeholder="Type Hidden" required>
+        
+        
+      </fieldset>
+
+26 Registration Form 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>300323</title>
+  </head>
+  <body>
+    <form action="/action.php">
+        <fieldset>
+            <legend>REGISTRATION FORM</legend>
+            <label for="fn">First Name</label>
+            <br>
+            <input type="text" id="fn">
+            <br><br>
+            <label for="ln">Last Name</label>
+            <br>
+            <input type="text" id="ln">
+            <br><br>
+            <label for="gender">Gender</label>
+            <br><br>
+            <input type="radio" name="Gender" value="Male" id="1">
+            <label for="1">Male</label>
+            <br>
+            <input type="radio" name="Gender" value="Female" id="2">
+            <label for="2">Female</label>
+            <br>
+            <input type="radio" name="Gender" value="Others" id="3">
+            <label for="3">Others</label>
+            <br><br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="abc@gmail.com">
+            <br><br>
+            <textarea name="tell" id="4" cols="30" rows="5" placeholder="Tell us about yourself..."></textarea>
+            <br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit" autofocus>
+    </form>
+  </body>
+</html>
+<!-- a2 -->
+<!DOCTYPEhtml>
+    <htmllang="en">
+
+        <head>
+            <title>Document</title>
+        </head>
+
+        <body>
+            <formmethod="post"action="">
+                <fieldset> <!--Main Heading-->
+                    <legend>REGISTRATION FORM</legend> <!--divs for User Details-->
+                    <div>
+                        <labelfor="fname">First Name</label> <br>
+                            <inputtype="text"id="fname"required>
+                    </div>
+                    <div> <br>
+                        <labelfor="lname">Last Name</label> <br>
+                            <inputtype="text"id="lname">
+                    </div>
+                    <div>
+                        <p>Gender</p>
+                        <inputtype="radio"name="gender"value="male">Male<br>
+                            <inputtype="radio"name="gender"value="female">Female<br>
+                                <inputtype="radio"name="gender"value="other">Other
+                    </div>
+                    <div> <br>
+                        <labelfor="mail">Email</label> <br>
+                            <inputtype="email"id="mail"required placeholder="abc@gmail.com">
+                    </div>
+                    <div> <br>
+                        <textareaplaceholder="Tell" rows="4" cols="30"></textarea>
+                    </div>
+                </fieldset> <br> <!--Submit button-->
+                <inputtype="submit"autofocus>
+                    </form>
+        </body>
+    </html>
+
+27 Class & Id 
+    <!-- div.redBg.blackBorder -->
+    <div class="redBg blackBorder"></div>
+    <!-- div#mainId -->
+    <div id="mainId"></div>
+<!-- .regBg bydefault div-->
+    <div class="redBg"></div>
+
+28 alt + shift + down
+copy selected content downwards
+
+29 always validate files using https://validator.w3.org/
+
+30 ctrl+shift+(right) to select complete word
+shift+down to select full line
+alt + cursor to select multiple pointer
