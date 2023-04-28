@@ -1,0 +1,844 @@
+1: 3 ways to add css 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <link rel="stylesheet" href="1.css">
+    <!-- priority3 -->
+    <style>
+        /* priority2 if writteb below link */
+        /* body{
+            background-color: rgb(115, 255, 0);
+        } */
+    </style>
+</head>
+
+<!-- <body style="background-color: aqua;"> -->
+    <!-- priority1 -->
+<body>    
+    <div class="container">
+
+    </div>
+</body>
+
+2: if an element belongs to a class and id , then css of id higher priority.
+
+3: Selectors
+1 tag - body{}
+2 id  - #first{}
+3 class- redBg{}
+group selectors- body,h2,.redBg{}
+universal selector *{}
+
+4: unsplash random 
+background-image: url("https://source.unsplash.com/random/?Cricket/") ;
+
+5:
+background-image: url("photo-1629100393327-a3a1550354fd.jpg"),url("images.png");
+
+6:
+background-repeat: repeat|no-repeat|repeat-x|repeat-y;
+default-repeat
+
+7:
+background-size: contain|cover|auto|(width value)|(width value) (height value);
+contain-it will expand its size till either width or/and height are filled. So either height will have gap or width but not both.
+
+8:
+background-position: top|bottom|right|left|center;//other value will be center 
+eg top- top center , left - left center.
+
+background-position: top right
+top right = right top
+
+9:
+background-attachment: fixed|local|scroll;
+
+10:
+background: pink url('original.jpg') no-repeat fixed   top right ;
+            colour image            repeat      attachment position 
+
+11:
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        background: green;
+        height: 200px;
+        width: 500px;
+        /* margin-border-padding-content */
+        /* mere bhai padle chote */
+        margin: 10px;/*all side same margin value*/
+        border: 8px ;/*this wont set any border*/
+        border: 8px solid;/*this will set black border bydefault*/
+        padding: 6px;
+
+        margin: 4px 3px 5px 2px;/*top right bottom left*/
+        /*2 - top&bottom right&left*/
+        /*3 - top right&left bottom*/
+
+        /* margin collapse: if 2 (top & bottom) margins overlap then greater value will be assigned */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, tempora aperiam? Aspernatur nam ipsum neque delectus optio similique, minima quia perferendis quod, ab voluptates ratione voluptatibus laboriosam maiores, est suscipit necessitatibus commodi. Tempora odio doloremque nisi minima eum corporis, enim possimus quas dolores consequuntur atque?
+</div>
+</body>
+
+12:
+box-sizing: border-box;
+tells the browser to account for any border and padding in the values you specify for an element's width and height.
+
+13:
+display: none;  /*no space and no content*/
+visibility: hidden;  /*no content but space */
+
+14:
+display: inline; 
+/*can set width,height,top&bottom margin&padding but wont affect other element's position and flow
+  display on same line*/
+
+display: block;
+
+display: inline-block;
+/*can set width,height,top&bottom margin&padding 
+  display on same line*/
+
+15:
+text-align:
+start
+        end
+    center
+a   b     c-justify : every line equal width
+
+text-align: center ;
+text-decoration: underline ;
+text-transform: capitalize;
+line-height: 25px;
+font-variant: small-caps;
+
+16:Google fonts
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Tilt+Prism&display=swap"
+  rel="stylesheet"
+/>
+
+font-family: "Sedgwick Ave Display", cursive;
+
+
+2nd way
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Tilt+Prism&display=swap');
+
+p{
+    font-family: 'Sedgwick Ave Display', cursive;
+    /* font-family: 'Tilt Prism', cursive; */
+}
+
+17:
+    a
+b       c
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .one {
+      background: black;
+      color: white;
+      height: 8vh;
+    }
+    .two {
+      background: green;
+      display: inline-block;
+      height: 90vh;
+      width: 50%;
+    }
+    .three {
+      background: blue;
+      display: inline-block;
+      height: 90vh;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="one">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, ipsa.
+  </div><div class="two">Lorem ipsum dolor sit amet.</div><div class="three">Lorem ipsum dolor sit.</div>
+</body>
+
+<!-- 50% and remove whitespace -->
+
+18:size
+rem : relative to root html tag
+em : relative to parent tag
+vw
+vh
+%
+
+max-width: 300px;
+<!-- min,max height width -->
+
+19:only box1 will change its position , rest all content as it is
+<style>
+    .container {
+      background: red;
+      width: 50vw;
+      height: 50vh;
+    }
+    .box1 {
+      background: yellow;
+      width: 10vw;
+      height: 10vh;
+      position: relative;
+      left: 28px;
+      right: 30px;
+      top: 15px;
+    }
+    .box2 {
+      background: blue;
+      width: 10vw;
+      height: 10vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+      exercitationem sapiente magnam nulla cupiditate architecto consequatur
+      iure voluptates dolorum. Aut!
+    </p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </div>
+</body>
+
+position: static|relative|fixed|sticky|absolute;
+relative: reserve its space and position from this place
+absolute: doesnt reserve it space and position from first not static parent 
+
+20:z-index
+if elements overlap higher z index element will be above lower
+for z-index to work position must not be static
+
+21:
+float: right|left ; /*allows to fill content on same line starting from left*/
+clear: right|left|both ; /*moves element to new line if something else present on its right*/
+
+22:Flexbox Container Property
+display: flex;
+flex-direction: row-reverse;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+
+23:Flexitem Property
+order: 2;
+align-self: flex-end;
+flex-grow: 1;
+flex-shrink: 1;
+
+24:CSS grid
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background: black;
+        display: grid;
+        /* grid-template-columns: auto auto auto; */
+        /* grid-template-columns:  100px 1fr 2fr; */
+        grid-template-columns:  50px 250px auto;
+        /* grid-template-columns:  repeat(3,1fr); */
+        /* grid-template-columns:  repeat(2,1fr 2fr 3fr); */
+        /* grid-row-gap: 100px;
+        grid-column-gap: 50px;*/
+        /* grid-gap: 10px 5px; */
+        grid-gap: 10px ;  
+        /* grid-gap: 20px;
+        justify-content: center;
+        align-content: space-between;
+        height: 80vh; */
+      }
+      .box {
+        background: green;
+        /* width: 30vw; */
+        /* height: 80px; */
+        border: 2px solid red;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" style="grid-row: 1/3;">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box" style="grid-column: 1/span 3;">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <!-- <div class="box">10</div> -->
+    </div>
+  </body>
+</html>
+
+25:media query
+<style>
+    body{
+        background: orange;
+    }
+    @media screen and (max-width:800px) {
+        body{
+            background: rgb(238, 21, 130);
+        }
+    }
+</style>
+
+26:list-style-type
+ul.a {list-style-type: none;}
+ul.b {list-style-type: square;}
+ol.c {list-style-type: upper-roman;}
+ol.d {list-style-type: lower-alpha;}
+</style>
+</head>
+<body>
+
+<h1>The list-style-type Property</h1>
+
+<p>Example of unordered lists:</p>
+
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Example of ordered lists:</p>
+
+<ol class="c">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+27:Transform
+/* transform: translate(30px,50px); */
+/* transform: rotate(0.25turn);
+transform: rotate(45deg);
+transform-origin: 0; */
+/* transform: translate(40px) rotate(0.25turn); */
+height: 100px;
+width: 100vw;
+transform: scale(2);
+/* both scale by 2 */
+transform: scaleX(2);
+transform: skew(10deg);
+transform-origin: 0;
+transform: skewY(30deg);
+
+transform: rotateX(45deg);
+
+28:transition
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: aqua;
+        }
+        .c{
+            margin: 30px;
+            padding: 50px;
+        }
+        img:hover{
+            height: 30px;
+        }
+        img{
+            /* height: 200px; */
+            /* transition-property: height;
+            transition-duration: 0.1s;
+            transition-delay: 0s;
+            transition-timing-function: ease-in-out; */
+            transition: height 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="c">
+        <img src="original.jpg" alt="" height="300px">
+    </div>
+</body>
+</html>
+
+eg2
+.parent{
+    background: yellow;
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    transition: background 1s, height 3s;
+    transition: all 3s;
+}
+
+.parent:hover{
+    background: red;
+    width: 400px;
+    height: 400px;
+}
+
+29:animation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .c{
+            background: aqua;
+            height: 100vh;
+            width: 100vw;
+            
+        }
+        .box{
+            background: rgb(230, 11, 193);
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* animation-name: widthAnimate;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 4;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: forwards; */
+            animation: widthAnimate 3s ease-in-out 0s 5 alternate forwards;
+        }
+        @keyframes widthAnimate {
+            from{
+                width: 300px;
+                height: 100px;
+            }
+            to{
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+        /* 0% 50% 100% */
+    </style>
+</head>
+<body>
+    <div class="c">
+        <div class="box">this is me</div>
+    </div>
+</body>
+</html>
+
+30:Progress Bar animation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background: black;
+            height: 100px;
+        }
+        main{
+            background: aqua;
+            height: 80vh;
+        }
+        .progress{
+            background: red;
+            height: 2px;
+            width: 0px;
+
+            animation: progressBar 3s ease-in-out 0s 1 normal backwards;
+        }
+        @keyframes progressBar {
+            0%{
+                width: 0px;
+            }
+            50%{
+                width: 90vw;
+            }
+            100%{
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress">
+
+    </div>
+    <header>
+        
+    </header>
+    <main>
+
+    </main>
+</body>
+</html>
+
+31:
+priority inline then external(using sheet) and internal(using tag) whichever is written last
+
+id>class>element 
+
+32:function
+calc()
+width: calc(100vw - 200px);
+
+var()
+:root{
+    --bgc1:aqua;
+
+}
+body {
+  background-color: rgb(0, 255, 0);
+}
+
+header{
+    width: calc(100vw - 200px);
+    background: var(--bgc1);
+    height: 200px;
+    margin: 20vh;
+}
+footer{
+    width: 60vw;
+    height: 10vh;
+    background: var(--bgc1);
+}
+
+33:Pseudo class
+
+li:first-child{
+    color:aqua
+}
+li:last-child{
+    color: yellow;
+}
+li:nth-child(even){
+    background: red;
+}
+li:nth-child(3n + 1){
+    background: red;
+}
+
+34:Pseudo Element
+p::first-letter{
+    font-size: 40px;
+}
+
+p::first-line{
+    font-size: 40px;
+}
+
+p::before{
+    content: url('images.png');
+    content: "extra";
+    /* image or text */
+}
+
+::selection{
+    background: yellow;
+    color: green;
+}
+
+35:transform wont work with inline element 
+
+36:Advance selector
+a[href="#1"]{
+    color: aqua;
+}
+/* attribute selector */
+
+.parent li{
+    color: aqua;
+}
+/* child at any level */
+
+.parent>p{
+    color: aqua;
+}
+/* direct child */
+
+.sib + li{
+    color: aqua;
+}
+/* next adjacent sibling of class="sib" */
+
+.parent~a{
+    color: aqua;
+}
+/* next all siblings */
+
+p,li{
+    color: aqua;
+}
+<!-- multiple selector -->
+
+37:Specificity
+p{
+    background: red !important;
+}
+.one{
+    background: green ;
+}
+div .one{
+    background: aqua;
+}
+/* imp=10000 .one=10 div=1
+p>div .one>.one */
+
+38:multiple column
+div{
+    column-count: 3;
+    column-rule: 2px solid red;
+    column-width: 400px;
+}
+h1{
+    column-span: all;   
+}
+
+39:control + space to show suggestions 
+
+40:browser size 
+
+41:Grid Area
+<div class="container">
+    <div class="gi" id="a">1</div>
+    <div class="gi" id="b">2</div>
+    <div class="gi" id="c">3</div>
+    <div class="gi" id="d">4</div>
+    <div class="gi" id="e">5</div>
+    <!-- <div class="gi">6</div>
+    <div class="gi">7</div>
+    <div class="gi">8</div> -->
+</div>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: indianred;
+    grid-template-areas: 
+    'a a a a a'
+    'b c c c d'
+    'b e e e e';
+    display: grid;
+    border: 2px solid aqua;
+}
+.gi{
+    border: 1px solid black;
+    background: wheat;
+    min-height: 100px;
+    min-width: 100px;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px;
+    /* width: 200px; */
+}
+
+#a{
+    grid-area: a;
+}
+#b{
+    grid-area: b;
+}
+#c{
+    grid-area: c;
+}
+#d{
+    grid-area: d;
+}
+#e{
+    grid-area: e;
+}
+
+42:Responsive break points in bootstrap 5.0
+
+<!-- 
+X-Small	            None    <576px
+Small	            sm	    ≥576px
+Medium	            md	    ≥768px
+Large	            lg	    ≥992px
+Extra large	        xl	    ≥1200px
+Extra extra large	xxl	    ≥1400px 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.example {
+  padding: 20px;
+  color: white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}
+</style>
+</head>
+<body>
+
+<h2>Typical Media Query Breakpoints</h2>
+<p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
+
+</body>
+</html>
+
+
+43:Control+shift+i to inspect 
+control+d / control+F2 to select next occurence of selected word 
+control+shift+l to select all occurence of selected word 
+control + backspace to remove entire word
+
+44:Landscape : width larger
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-color: lightgreen;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+</style>
+</head>
+<body>
+
+<p>Resize the browser window. When the width of this document is larger than the height, the background color is "lightblue", otherwise it is "lightgreen".</p>
+
+</body>
+</html>
+
+45:max-width:600 will apply if screen width is 600 or less
+
+46:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h2>Styling a link depending on state</h2>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+</body>
+</html>
+
+47:
+
+48:
+
+49:
+
