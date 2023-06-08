@@ -1,0 +1,2028 @@
+1:make script tag and write js. check console tab in browser for output
+<body>
+    <h1>js1</h1>
+    <script>
+        console.log("kvk is here");
+    </script>
+</body>
+
+2:
+https://replit.com/@KAMALKOTHARI
+create node template
+
+3:
+let a=50;
+console.log(a);//50
+
+a="kamal";//allowed in js to change datatype of variable in run time 
+console.log(a);//kamal
+
+// letters,digits,$ and _ are allowed to name a variable
+// cannot start with digit 
+// cannot use reserved words 
+// kamal != Kamal (case sensitive)
+
+4:
+//var
+var a;
+var a=5;
+var a="hello";//redeclaring 
+console.log(a);//hello
+if(true)
+{
+  a="hi";//updating 
+  console.log(a);//hi
+}
+console.log(a);//hi
+
+//let
+let a;
+let a=5;
+// let a="hello";//redeclaring error
+a="hello";//can update
+console.log(a);//hello
+if(true)
+{
+  let a="hi";//updating 
+  console.log(a);//hi
+}
+console.log(a);//hello
+
+//const
+//const a;//error const need to be initialised while declaring 
+const a=5;//cannot update or redeclare
+
+5:datatypes
+let a = null;
+let b = 5;
+let c = false;
+let d = BigInt('2345');
+let e ="kvk";
+let f = Symbol("I am a symbol");
+let g = undefined;
+
+console.log(a,b,c,d,e,f);
+console.log(typeof d);//bigint
+// datatypes primitive(7) non-primitive(1-object)
+//nnbbssu
+
+//object
+const item = {
+  "harry" : true,
+  "shubh" : false,
+  "lovish" : 67
+}
+
+console.log(item["shubh"]);//false
+
+//eg
+let obj = {
+    name : "kamal",
+    age : 24,
+    place : "ghatkopar"
+}
+console.log(obj);
+console.log(obj["age"]);
+console.log(obj["name"]);
+console.log(obj.age);
+console.log(obj.name);
+
+6:
+let a = "kamal";
+console.log(a+5);//kamal5
+console.log(5+a);//5kamal
+
+console.log(typeof (5+a));//string
+
+const a1 = {
+  name : "kvk",
+  secton : 1
+}
+
+// a1=5;//error
+a1["friend"]="krish";//we can add new key to const obj
+a1["name"]="vvk";//we can update as well
+console.log(a1);//{name: 'vvk', section:1 , friend='krish'}
+// console.log(a1[name]);//error
+console.log(a1["name"]);//vvk
+console.log(a1.name);//vvk
+
+7:operators
+let a = 40;
+let b = 6;
+
+//arithmetic operators
+console.log("a + b = ", a+b);
+console.log("a - b = ", a-b);
+console.log("a * b = ", a*b);
+console.log("a / b = ", a/b);//6.6667
+console.log("a ** b = ", a**b);//expo
+console.log("a % b = ", a%b);
+
+//assignment operators
+a+=5;
+console.log(a);//45
+
+//comparison operators
+let c1 = 5;
+let c2 = '5';
+console.log(c1==c2);// 5=='5' true
+console.log(c1===c2);// 5==='5' false
+console.log(c1!=c2);// 5!='5' false
+console.log(c1!==c2);// 5!=='5' true
+console.log(c1>=c2);
+
+//logical operators
+// && and 
+// || or 
+// ! not 
+console.log(true || false);//t
+console.log(true && false);//f
+console.log(!false);//t
+
+//bitwise 
+console.log(3 & 5);//1
+console.log(3 | 5);//7
+console.log(3 ^ 5);//6
+
+8:prompt alert & if else
+let a = prompt("whats ur age?");//50
+console.log(a);//50
+console.log(typeof a);//string
+
+a=Number.parseInt(a);
+console.log(typeof a);//number
+
+if(a>0)
+{
+  alert("+ve");
+}
+else{
+  alert("-ve");
+}
+
+//ternary operator
+console.log("you can", a>18 ? "drive":"not drive","thanks!");
+//you can drive thanks! //bydefault space
+
+9:switch
+//switch checks strict equality
+let age = prompt("age");
+switch(age)
+  {
+    case '10' :
+      console.log("age 10");
+      break;
+    case '11' :
+      console.log("age 11");
+      break;//if no break it will execute everything 
+    case '12' :
+      console.log("age 12");
+      break;
+    default:
+      console.log("age kk");
+      
+  }
+
+console.log('hi');
+
+10:
+//loops
+for(let i=1;i<5;i++)
+  {
+    console.log(i);
+  }
+
+let obj = {
+  kams:98,
+  hardik:42,
+  kuld:50
+}
+
+for(let a in obj)//a will access all keys one by one 
+  {
+    console.log(a);
+  }
+
+for(let a in obj)
+{
+    console.log(a,obj[a]);//correct
+    // console.log(a,obj["a"]);
+    // console.log(a,obj.a);
+}
+
+// for(let a of obj)//error //for of needs iterable obj -> array or string 
+//   {
+//     console.log(a);
+//   }
+
+for(let b of 'Kamal')
+  {
+    console.log(b);//all letters 
+  }
+
+// console.log(b);//error let scope block 
+
+let c=1;
+while(c<14)
+  {
+    console.log(c++);
+    // c++;
+  }
+
+c=15;
+do{
+  console.log(c++);
+}while(c<11)
+
+11:
+//function
+function add2(x,y){
+  return x+y;
+}
+
+const sum2 = (p,q) => {
+  return p+q;
+}
+
+console.log("sum of 3 & 4 is",add2(3,4),"done");
+console.log("sum of 3 & 4 is",sum2(3,4),"done");
+
+12:
+//f
+let marks = {
+  kvk:99,
+  ash:40,
+  abd:50
+}
+
+console.log(Object.keys(marks).length);//3
+console.log(Object.keys(marks));//all keys array ['kvk','ash','abd']
+console.log(Object.values(marks));//all values array [90,40,50]
+
+for(let i=0;i<Object.keys(marks).length;i++)
+  {
+    console.log(Object.keys(marks)[i] , "got" , marks[Object.keys(marks)[i]]);//, gives space 
+    console.log(Object.keys(marks)[i] + "got" + marks[Object.keys(marks)[i]]);//+ no space 
+  }
+
+for(let i in marks)
+  {
+    console.log(i,"got",marks[i]);
+  }
+
+13:
+//strings
+let s ="kamal v kothari";
+console.log(s);
+console.log(s.length);//15
+console.log(s[2]);//m
+let s2 ='kamal "v kothari';//we can use double quotes inside single quoted string and vv
+console.log(s2);
+console.log(s2.length);//15
+
+let f1="kamal";
+let f2="kris";
+
+console.log(`f1 is friend of f2`);
+console.log(`${f1} is friend of ${f2}`);//backticks & template literals, string interpolation
+
+// let fruit='Bana'na';//error
+let fruit='Bana\'na';//using backslash \
+console.log(fruit);//Bana'na
+console.log(fruit.length);//7
+
+console.log("kam\nal");//new line
+console.log("kam\tal");//space
+console.log("kam al");//space
+console.log("kam\ral");//first kam is printed then cursor is brought back to start so al will over write ka //alm
+
+14:string methods
+/**/
+let str = "Kams .v";
+console.log(str.length);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.slice(2));//from index 2 to end 
+console.log(str.slice(2,4));//from index to 4 (4 exclude )
+console.log(str.replace("am","xyzabc"));//replace if exact match found (case sensitive)
+
+let s1="kvk",s2="xyz";
+console.log(s2.concat("hi",s1,"ok"));
+
+let tr="   kam  al      ";
+console.log("oo"+tr.trim() + "ok");
+
+console.log(str);//same as start. strings are immutable.
+
+for(let ch in str)//in 0123456
+  {
+    console.log(ch);
+  }
+for(let ch of str)//of Kams .v
+  {
+    console.log(ch);
+  }
+for(let ch=0;ch<str.length;ch++)
+  {
+    console.log(str[ch]);
+  }
+
+let s5 = "please give 1000";
+console.log(s5.slice(-4));
+console.log(s5.slice(12));
+console.log(s5.slice("please give ".length));
+
+//includes startswith endswith
+
+15://arrays
+let marks = [80,50,false,"absent"];
+console.log(marks);
+console.log(marks[0]);//80
+console.log(marks[4]);//undefined
+console.log(marks.length);//4
+console.log(marks[-1]);//undefined
+
+marks[5]=99;//4th empty 5th entry added
+console.log(marks);
+console.log(marks.length);//6
+//arrays are mutable
+marks[1]=29;//update
+console.log(marks);
+
+console.log(typeof marks);//object
+
+16://arrays methods
+let arr = [1,2,3,4,20,6];
+
+let s=arr.toString();
+console.log(s);//1,2,3,4,20,6
+
+let c=arr.join("-");
+console.log(c);
+
+let r1=arr.pop();//removes last and returns popped element
+let r2=arr.push(100);//adds element to last and returns new array length
+let r3=arr.shift();//removes first and returns popped element
+let r4=arr.unshift(44);//adds element to start and returns new array length
+console.log(arr,r1,r2,r3,r4);
+
+delete arr[1];//deletes the item and says 1 empty item and length doesnt change
+console.log(arr);
+
+arr[1]=58;
+console.log(arr);
+
+17:
+a3=a1.concat(a2);//add elements of a1 and a2 
+
+//arr
+let a1=[1,2,5,300,44,51,17];
+a1.sort();//alphabetical sort 44<5
+//1 17 2 300 44 5 51
+console.log(a1);
+
+let compare1 = (a,b) => {
+  return a-b;//ascending
+}
+a1=[1,2,5,300,44,51,17];
+a1.sort(compare1);
+//numbers.sort((a, b) => a - b);
+//1 2 5 17 44 51 300
+console.log(a1);
+
+let compare = (a,b) => {
+  return b-a;//descending
+}
+a1=[1,2,5,300,44,51,17];
+a1.sort(compare);
+//300 51 44 17 5 2 1
+console.log(a1);
+
+a1=[1,2,5,300,44,51,17];
+a1.reverse();
+console.log(a1);
+
+a1=[1,2,5,300,44,51,17];
+let d1=a1.splice(2,3,101,102);//remove 3 elements starting from index 2 and add elements 101 102, returns deleted elements
+// a1.splice(2,3);//remove 3 elements starting from index 2 
+// a1.splice(2);//remove all elements starting from index 2 
+console.log(a1);
+console.log(d1);
+
+a1=[1,2,5,300,44,51,17];
+// let newa = a1.slice(4);//take all elements from 4th index till last
+let newa = a1.slice(4,6);//take all elements from 4th index till 6th. 6th exclude
+console.log(a1,newa);
+
+18:
+//
+let num = [4,10,30,12];
+for(let i=0;i<num.length;i++)
+  {
+    console.log(num[i]);
+  }
+
+//forEach
+num.forEach(  (ele)=>{
+  console.log(ele*ele)
+}  )
+
+//Array.from
+let str = "Kamal";
+let arr = Array.from(str);//create array from str
+console.log(arr,str);
+
+19://map is used to create new array , forEach is used to perform operation on given array
+let arr = [20,5,11];
+
+// let a = arr.map((val)=>{
+//    console.log(val);
+//    return val+2;//this will be stored in new a
+//  })
+// console.log(a);//[22,7,13]
+// arr.map(()=>{})
+
+let a = arr.map((val,idx,array)=>{
+  console.log(val,idx,array);
+  return val+idx;
+})
+console.log(a);
+//20 0 [20,5,11] 
+//5 1 [20,5,11]
+//11 2 [20,5,11]
+//[20,6,13]
+
+//filter
+let arr = [10,2,30,5,15];
+let a = arr.filter((val)=>{
+  return val<15;
+})
+console.log(a);//[10,2,5]
+
+//reduce
+let arr = [10,2,30,5,15];
+let a = arr.reduce((val1,val2)=>{
+  console.log(val1,val2);//10 2 , 12 30 ...
+  return val1 + val2;
+})
+console.log(a);//62
+
+20://guess the number game
+//Math.random() gives a number [0,1) eg.0.9652920329100836 between 0(include) to 1(excluded)
+let x = Math.ceil((Math.random() * 100) );//or let x = Math.floor((Math.random() * 100) + 1);
+//console.log(x);
+/**/ 
+let score = 99;
+
+let g = prompt("Guess the number");
+g=Number.parseInt(g);
+while(x!=g)
+  {
+    if(g<x)
+    {
+      console.log("ur no is smaller, try larger");
+    }
+    else {
+      console.log("ur no is larger, try smaller");
+      
+    }
+    g = prompt("Guess the number");
+    g=Number.parseInt(g);
+    score--;
+  }
+
+console.log("correcttttttt guessss","actual number is",x,g,"and ur score is",score);
+
+21:for javascript open repl with nodejs template
+for dom bom, open repl with html,css javascript template
+
+22:Different console methods
+console.log(console);
+console.error("red");
+console.assert(5>6);//Assertion failed if false 
+console.assert(50>6);//
+console.clear();
+
+let obj = {a:1,b:20,c:300}
+console.table(obj);
+
+console.warn("yellow");
+
+console.time("forstart");
+for(let i=1;i<20;i++)
+{
+    console.log(100);
+}
+console.timeEnd("forstart");
+
+console.time("whilestart");
+let i=1;
+while(i<20)
+{
+    console.log(100);
+    i++;
+}
+console.timeEnd("whilestart");
+
+23:
+let a = prompt("enter val", "55");//2nd argument is default value
+console.log(a, typeof a);
+
+let write = confirm("let me write")
+if(write)
+{
+    document.write(a);
+}
+else{
+    document.write("let me write");
+}
+
+24:
+window - global 
+window is divided into 3 - DOM, BOM ,CORE JS
+everything is under window 
+console.log() == window.console.log
+
+25:
+let a = prompt("give a");
+a=Number.parseInt(a);
+if(a>5)
+{
+    location.href="https://google.com";
+}
+
+let color = prompt("enter color");
+document.body.style.background = color;
+
+26:
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+var computerResponse = getRandomInt(1, 3);
+
+27:stone paper scissor
+let cpuno = Math.floor(Math.random()*3);
+let cpuarr = ['St','Pa','Si'];
+let cpu = cpuarr[cpuno];
+
+// console.log(cpu,cpuno);
+let you = prompt("select from 'St','Pa','Si'");
+console.log(cpu,cpuno,you);
+let result=(cpu,you)=>{
+
+    if(cpu === you)
+    {
+        return "Tied";
+    }
+    else if(cpu === "St")
+    {
+        return you==="Pa"? "You won" : "opss";
+    }
+    else if(cpu === "Pa")
+    {
+        return you==="Si"? "You won" : "opss";
+    }
+    else 
+    {
+        return you==="St"? "You won" : "opss";
+    }
+}
+console.log(result(cpu,you));
+
+
+28:DOM Manipulations 
+document.getElementsByClassName("cursor-pointer")[5].style.color="red"
+
+autocorrect by browser: if we close span by div it will be automatically closed by span
+also table will be given tbody tag bydefault
+
+document.body
+document.documentElement -entire html
+document.head
+
+29:
+children - everything inside a tag
+child-nodes : direct child 
+descendant nodes : all nested elements, child , their child and so on.
+
+document.body.firstChild - text if blank space else element
+
+console.log(document.body.firstChild);
+console.log(document.body.lastChild);
+console.log(document.body.childNodes);//all
+
+$0 current element can be used in console
+$1 previous selected element
+
+console.log(document.body.parentElement);//null if not valid html element 
+console.log(document.body.parentNode);
+console.log(document.body.nextSibling);
+console.log(document.body.previousSibling);
+
+console.log(b.firstChild);
+console.log(b.firstElementChild);
+console.log(b.lastElementChild);
+console.log(b.nextElementSibling);
+console.log(b.previousElementSibling);
+
+30:
+//let c2 = document.getElementById(id2);//wont work
+let c2 = document.getElementById("id2");
+c2.style.backgroundColor="brown";
+
+let s1 = document.getElementsByClassName("box");
+console.log(s1);
+// s1.style.backgroundColor = "aqua";//wont work
+
+s1 = document.getElementsByClassName("box")[0];
+console.log(s1);
+s1.style.background = "aqua";
+
+let s2 = document.querySelectorAll(".box")[1];
+console.log(s2);
+// let s2 = document.querySelector(".box");
+// console.log(s2);
+
+let s5 = document.querySelector("div");
+console.log(s5.getElementsByTagName("div"));
+
+console.log(document.getElementsByName("para"));
+
+console.log(document.getElementById("paraid").matches("p"))
+console.log(document.getElementById("paraid").closest("p"))
+
+let a=document.querySelector(".box");
+let b=document.querySelector("#paraid2");
+console.log(a.contains(b));
+
+31:
+let a = document.getElementsByTagName("p")[0];
+console.log(a);//html element
+console.dir(a);//object & properties
+
+//tagname only for elements
+let a = document.body.firstChild.tagName;//wont work
+console.log(a);
+let b = document.body.firstElementChild.tagName;
+console.log(b);
+
+//nodeName for all
+let a = document.body.firstChild.nodeName;
+console.log(a);
+let b = document.body.firstElementChild.nodeName;
+console.log(b);
+
+//inner & outerHTML
+let a = document.body.getElementsByClassName("box")[0];
+console.log(a.innerHTML);
+a.innerHTML= "<b>kams</b>";
+
+let b = document.body.getElementsByClassName("box")[0];
+console.log(b.outerHTML);
+b.outerHTML= "<b>kams</b>";
+
+console.log(document.body.textContent);
+console.log(document.body.firstChild.nodeValue);
+
+32:
+let a = document.getElementById("o101");
+console.log(a.getAttribute("class"));
+console.log(a.hasAttribute("class"));
+console.log(a.hasAttribute("href"));
+// a.setAttribute("class","blueBg redBorder");
+// a.removeAttribute("class");
+console.log(a.attributes);
+
+33:
+let a = document.getElementsByClassName('box')[0];
+let b = document.createElement('div');
+b.innerHTML="<b>bold play</b>";
+// a.append(b);//end of container
+// a.prepend(b);//start of container
+// a.before(b);// before start of container
+// a.after(b);// after end of container
+a.replaceWith(b);
+
+34:
+let a=document.getElementById("first");
+console.log(a);
+a.insertAdjacentHTML('afterbegin','<div class="t"> afterbegin </div>');
+a.insertAdjacentHTML('beforebegin','<div> beforebegin </div>');
+a.insertAdjacentHTML('afterend','<div> afterend </div>');
+a.insertAdjacentHTML('beforeend','<div> beforeend </div>');
+
+element.insertAdjacentText(position, text);
+element.insertAdjacentElement(position, element);
+
+35:
+let first = document.getElementById('first');
+first.className = 'redBg blueBor';
+
+console.log(first.classList);
+
+first.classList.add('it');
+first.classList.remove('it');
+first.classList.toggle('it');
+console.log(first.classList.contains('it'));
+
+36:setTimeout(once after 5sec) & setInterval(after every 5sec)
+alert("hii");
+
+//a will have timerId 
+let a = setTimeout(function(){
+    alert("I am 5 sec late");
+},5000)
+
+clearTimeout(a);
+
+const sum = (a,b)=>{
+    console.log("sum is",(a+b));
+    return a+b;
+}
+setTimeout(sum,5000,3,4);
+
+let a = setInterval(function(){
+    alert("I am 5 sec late");
+},5000)
+
+clearInterval(a);
+
+
+const sum = (a,b)=>{
+    console.log("sum is",(a+b));
+    return a+b;
+}
+setInterval(sum,5000,3,4);
+
+37:Browser Events
+      <button onclick="alert('you clicked');let a=10;console.log(a);">click me</button>
+
+38:
+let a = document.querySelector('button');
+// console.log(a);
+let x=function(e){  //e is event object , e.target will be btn
+    alert("first");
+}
+let y=function(){
+    alert("second");
+}
+a.addEventListener('click',x);
+a.addEventListener('click',y);
+
+let z=prompt("your fav no");
+if(z=='2'){
+    a.removeEventListener('click',x);
+}
+
+39:Jokes Api pendingtocode
+
+40:CLock pendingtocode
+
+41:bulb
+let a = document.getElementById('box');
+
+setInterval(function(){
+    a.classList.toggle('boxc');
+},100);
+
+42:Asynchronous
+console.log("start");
+setTimeout(function(){ //Asynchronous running in background and moves ahead
+    console.log("we r late")
+},5000)
+console.log("end");
+
+//callback passing f2 inside f1 as callback which will be executed after f1
+console.log("start")
+
+function sumofno(x,y,callback)
+{
+    console.log((x+y));
+    callback(x,y);
+}
+
+function gm(x,y)
+{
+    console.log("gm"+(x+y));//5
+    // console.log("gm"+(x));//5
+}
+
+sumofno(5,10,gm);
+console.log("end");
+// start 
+// 15
+// gm15 
+// end
+
+//issues callback hell & pyramid of doom
+
+43:Promise -> parallel processing
+
+// let p = new Promise((resolve, reject) => {
+//     // console.log(p);//error p not initialised
+//     resolve(10);
+// })
+// console.log(p);
+
+let p = new Promise(function(resolve, reject)  {
+    // console.log(p);//error p not initialised
+    resolve(10);
+})
+console.log(p);//(state)fulfilled (result)10
+
+44:
+let p = new Promise((resolve, reject) => {
+    console.log("pending");
+    setTimeout(()=>{
+        // resolve('kams');//it can be anything number string boolean array etc
+        reject(new Error("some error"));
+    },5000)
+})
+console.log(p);//pending till 5 secs then fulfilled
+
+45:parallel in 5 secs both done
+let p1 = new Promise((resolve, reject) => {
+    console.log("pending");
+    setTimeout(()=>{
+        resolve('kams');//it can be anything number string boolean array etc
+        console.log('fulfilled');
+        // reject(new Error("some error"));
+    },5000)
+})
+let p2 = new Promise((resolve, reject) => {
+    console.log("pending");
+    setTimeout(()=>{
+        // resolve('kams');//it can be anything number string boolean array etc
+        console.log('rejected');
+        reject(new Error("some error"));
+    },5000)
+})
+console.log(p2);//pending till 5 secs then fulfilled
+
+46:
+let p1 = new Promise((resolve, reject) => {
+    console.log("pending");
+    setTimeout(()=>{
+        resolve('kams');//it can be anything number string boolean array etc
+        console.log('fulfilled');
+        // reject(new Error("some error"));
+    },5000)
+})
+let p2 = new Promise((resolve, reject) => {
+    console.log("pending");
+    setTimeout(()=>{
+        // resolve('kams');//it can be anything number string boolean array etc
+        console.log('rejected');
+        reject(new Error("some error"));
+    },5000)
+})
+console.log(p2);//pending till 5 secs then fulfilled
+
+p1.then((val)=>
+{
+    console.log(val);
+})
+//p1.then(()=>{})
+
+p2.catch((err)=>{
+    console.log(err);
+})
+//other way
+p2.then(
+    (val)=>{console.log(val);},
+    (err)=>{console.log(err);}
+)
+
+p1.then(alert);//alert msg with result value
+p2.catch(alert);//alert msg with error
+
+
+47:
+let p = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve(1);
+    },3000)
+})
+p.then((val)=>{
+    console.log(val,"1st");
+    let p2 = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(10);
+        },3000)
+    })
+    return p2;
+}).then((val)=>{
+    console.log(val);
+    setTimeout(()=>{
+        console.log("100");
+    },4000)
+    return 1000;
+}).then((val)=>{
+    console.log(val);
+})
+//a3:1 1st a3:10 1000 a4:100 
+
+//short
+const myPromise = new Promise((resolve, reject) => {
+    // Simulating an asynchronous operation
+    setTimeout(() => {
+      const randomNumber = Math.random();
+      if (randomNumber < 0.5) {
+        resolve(randomNumber);
+      } else {
+        reject(new Error('Random number is greater than or equal to 0.5'));
+      }
+    }, 2000);
+  });
+  
+  myPromise
+    .then(result => {
+      console.log('Promise resolved with value:', result);
+    })
+    .catch(error => {
+      console.error('Promise rejected with error:', error);
+    });
+  //other way
+p2.then(
+    (val)=>{console.log(val);},
+    (err)=>{console.log(err);}
+)
+
+48:Promise api 
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve(100);
+    },3000)
+})
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        // resolve(200);
+        reject('0');
+    },2000)
+})
+let p3 = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve(300);
+    },5000)
+})
+
+let p4 = Promise.all([p1,p2,p3]);//if all resolved it will work and show result after max duration promise,if any one rejected it will show error
+p4.then((val)=>{
+    console.log(val);//(3) [100, 200, 300]
+})
+
+let p4 = Promise.allSettled([p1,p2,p3]);//it will show status and result of all
+p4.then((val)=>{
+    console.log(val);//(3) [100, 200, 300]
+})
+// (3) [{…}, {…}, {…}]0: {status: 'fulfilled', value: 100}1: {status: 'rejected', reason: '0'}2: {status: 'fulfilled', value: 300}length: 3[[Prototype]]: Array(0)
+
+let p4 = Promise.race([p1,p2,p3]);//whichever is fast (result/error)
+
+let p4 = Promise.any([p1,p2,p3]);//first fulfilled, if all rejected aggregate error
+
+// let p4 = Promise.resolve(5);//resolve with value
+let p4 = Promise.reject('6');//reject with error 
+
+49:async
+async function harry(){
+    console.log("haa")
+    return 5;//async will return promise
+}
+// harry();
+
+harry().then((val)=>{//if asyn missing we cant use .then 
+    console.log(val);
+})
+
+50:await
+async function harry(){
+    console.log("welcome to waether control room");
+    let p1 = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(22);
+        },8000)
+    })
+    let p2 = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(33);
+        },6000)
+    })
+    console.log("fetching Mumbai")
+    let mumbaiTemp= await p1;
+    console.log("got Mumbai")//wait 8 sec, simultaneously finding delhi
+
+    console.log("fetching Delhi")
+    let delhiTemp = await p2;
+    console.log("got delhi")//on the spot because it needed only 6 sec 
+
+    return [mumbaiTemp,delhiTemp];
+}
+harry().then((val)=>{
+    console.log(val)
+});
+
+51:
+async function harry(){
+    console.log("welcome to waether control room");
+    let p1 = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(22);
+        },4000)
+    })
+    let p2 = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(33);
+        },7000)
+    })
+    console.log("fetching Mumbai")
+    let mumbaiTemp= await p1;
+    console.log("got Mumbai")//wait 8 sec, simultaneously finding delhi
+
+    console.log("fetching Delhi")
+    let delhiTemp = await p2;
+    console.log("got delhi")//on the spot because it needed only 6 sec 
+
+    return [mumbaiTemp,delhiTemp];
+}
+
+ const cherry= async()=>{
+    console.log("not waiting ");
+}
+ 
+// let x = harry();
+// let y = cherry();
+//both start no wait
+
+//cherry wait for harry
+const main2 = async()=>{
+    let x = await harry();
+    let y = await cherry();
+    
+}
+main2();
+
+//examples
+//1
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function example1() {
+  console.log('Before delay');
+  await delay(2000);
+  console.log('After delay');
+}
+
+example1();
+//2
+async function example2() {
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  console.log(data);
+}
+
+example2();
+//3
+function fetchData(id) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(`Data for ID ${id}`);
+    }, Math.random() * 2000);
+  });
+}
+
+async function example3() {
+  const promise1 = fetchData(1);
+  const promise2 = fetchData(2);
+  const promise3 = fetchData(3);
+  
+  const results = await Promise.all([promise1, promise2, promise3]);
+  console.log(results);
+}
+
+example3();
+
+52:try & catch
+try {
+    console.log(kamal);//error will be handled
+} catch (err){  //arguement is optional
+    console.log('errr',err);
+}
+
+try {
+    setTimeout(()=>{
+        console.log(kamal);//error wont be handled
+    },100)
+} catch (err){  //arguement is optional
+    console.log('errr',err);
+}
+console.log('end');
+
+53:
+try {
+    console.log(kvk);
+} catch (error) {
+    console.log(error);
+    // ReferenceError: kvk is not defined
+    // at script.js:2:17
+    console.log(error.name);//ReferenceError
+    console.log(error.message);//kvk is not defined
+    console.log(error.stack);//same as error
+}
+
+//custom error
+try {
+    console.log('try');
+    throw new Error('custom error message');//Error ReferenceError TypeError SyntaxError RangeError EvalError
+    console.log('wont be executed,unreachable code ');
+} catch (error) {
+    console.log('err start')
+    console.log(error);
+    console.log(error.name);//Error
+    console.log(error.message);//custom error message
+    console.log('err end')
+}
+
+//finally
+const f = ()=>{
+
+    try {
+        console.log(correct);
+        return;
+    } catch (error) {
+        console.log('incorrect');
+    }
+    finally{
+        console.log('run in all cases: if try has error or not, catch has error or not, if return statement in try finally will run just before moving to outer code');
+    }
+    console.log('this wouldnt run if error in catch');
+}
+f();
+console.log('f end');
+
+54:Hackerman pendingtocode
+
+55:3 promise 1 by 1 vs 3 together pendingtocode
+
+56: fetch api
+
+fetch('https://meowfacts.herokuapp.com/')
+// fetch('https://meowfacts.herokuapp.com/?count=3')
+// fetch('https://meowfacts.herokuapp.com/?id=3')
+// fetch('https://meowfacts.herokuapp.com/?lang=french') //error
+  .then(response => {
+    console.log(response.status);
+    console.log(response.ok);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Process the data retrieved from the API
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors that occurred during the request
+    console.error('Error:', error);
+  });
+
+57: get post  
+https://jsonplaceholder.typicode.com/guide/ 
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 100,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) =>
+  {
+    console.log(json);
+    console.log('post');
+  })
+
+  fetch('https://jsonplaceholder.typicode.com/posts/'+ 100)
+  .then((response) => response.json())
+  .then((json) => {
+    console.log(json);
+    console.log('get')
+  });
+
+58: cookie
+alert(document.cookie) // to see all cookie
+
+document.cookie
+'_octo=GH1.1.1516677834.1674011056; preferred_color_mode=light; tz=Asia%2FCalcutta'
+document.cookie = "name=kvk"//it wont overwrite all , it will add
+'name=kvk'
+document.cookie
+'name=kvk; _octo=GH1.1.1516677834.1674011056; preferred_color_mode=light; tz=Asia%2FCalcutta'
+
+let a = encodeURIComponent('1;;');
+let b = encodeURIComponent('2==');
+document.cookie= `${a}=${b} `
+'1%3B%3B=2%3D%3D '
+decodeURIComponent('1%3B%3B')
+'1;;'
+
+59: localStorage & sessionStorage
+localStorage.setItem('kvk','11'); //application/localStorage
+// localStorage.removeItem(key);
+// localStorage.getItem(key)
+localStorage.clear()
+
+sessionStorage.setItem();
+
+60:if we change in other window and want to get alert
+window.onstorage=(e)=>{
+    alert('changed');
+    console.log(e);
+}
+
+61:Todo pendingtocode
+
+62:Prototype
+let a = {
+    name:"kvk",
+    language:'love'
+}
+
+console.log(a);
+console.log(a.language);
+// a.run();//error
+
+let p = {
+    run:()=>{
+        console.log('run');
+    }
+}
+
+a.__proto__=p;
+a.run();//first search inside self if not found then search in proto and so on ...
+
+63:OOPS class & object
+class RailwayForm{
+    submit(){
+        alert('form submit by '+ this.name);
+    }
+    cancel(){
+        alert('cancelled by '+ this.name);
+    }
+    fill(gname)
+    {
+        this.name= gname;
+    }
+}
+
+let kvk = new RailwayForm();
+kvk.fill('kamal');
+let dev = new RailwayForm();
+dev.fill('devd');
+kvk.submit();
+dev.submit();
+kvk.cancel();
+
+64:constructor
+class RailwayForm{
+    constructor(gname,trainNo){
+        this.name=gname;
+        this.trainNo=trainNo;
+    }
+    submit(){
+        alert('form submit by '+ this.name + " for train " + this.trainNo);
+    }
+    cancel(){
+        alert('cancel '+ this.name + " for train " + this.trainNo);
+    }  
+}
+
+let kvk = new RailwayForm('kamal',122);
+let dev = new RailwayForm('dev',300);
+kvk.submit();
+dev.submit();
+kvk.cancel();
+
+65:Inheritance
+class Animal{
+    constructor(name,legs){
+        this.name = name;
+        this.legs = legs;
+    }
+    run(){
+        console.log(this.name + " is running");
+    }
+    sleep(){
+        console.log(this.legs + " legs is sleeping");
+    }
+}
+
+let ani=new Animal('cow',4);//single/double inverted needed for string
+ani.run();
+ani.sleep();
+
+//class Child extends Parent
+class Monkey extends Animal{
+    eat(){
+        console.log(this.name + " is eating banana");
+    }
+}
+
+let mon = new Monkey("chimpu",2);
+mon.eat();
+mon.sleep();
+// ani.eat();//error
+
+66:super
+class Employee{
+    login(){
+        console.log("employee has logged in");
+    }
+}
+
+
+class Programmer extends Employee{
+    login(){
+        // console.log("Programmer has logged in");
+        super.login();//use super to run parent method 
+        console.log('Hello Programmer');//extra
+    }
+}
+let e = new Programmer();
+e.login();
+/*
+employee has logged in
+Hello Programmer
+*/
+
+67:constructor & Inheritance
+class Employee{
+    constructor(name)
+    {
+        console.log(`${name} in employee constructor`)
+        this.name = name;
+    }
+}
+
+
+class Programmer extends Employee{
+    //1
+    //if no constructor then parents constructor will be called
+    
+    //2
+    //must call super constructor in derived class before accessing 'this' or returning from derived constructor
+    // at new Programmer 
+
+    // constructor(name){
+    //     console.log(`${name} in Program constructor`)
+    //     this.name = name;
+    // }
+
+    constructor(name){
+        super(name);
+        console.log("we can use 'this' after super");
+    }
+    
+}
+let e = new Programmer('kvk');
+
+68:static
+
+//  static methods are methods that are associated with a class rather than an instance of the class. They can be called directly on the class itself without needing to create an instance of the class.
+class MathUtils {
+    static add(a, b) {
+      return a + b;
+    }
+  }
+  
+  // Calling the static method directly on the class
+  console.log(MathUtils.add(5, 3)); // Output: 8
+//It's important to note that static methods cannot access non-static properties or methods of the class since they are not associated with a specific instance.
+  
+//example
+class MyClass {
+    static count = 0;
+  
+    constructor() {
+      MyClass.count++;
+    }
+  }
+  console.log(MyClass.count); // Output: 0
+
+  const instance1 = new MyClass();
+  console.log(MyClass.count); // Output: 1
+  
+  const instance2 = new MyClass();
+  console.log(MyClass.count); // Output: 2
+  
+69:get & set
+class Person{
+    constructor(fname,lname){
+        this._fname = fname;
+        this._lname = lname;
+    }
+    get firstName(){
+        return this._fname;
+    }
+    set firstName(val){
+        this._fname = val;
+    }
+}
+let p = new Person('kvk','kothari');
+console.log(p.firstName);//get
+p.firstName='kamal';//set
+console.log(p.firstName);
+
+70:instanceof
+let p = new Manager('a','b');
+console.log(p instanceof Person); //returns true if obj belongs to class or any other inheriting class i.e belongs to any child
+
+71: Password Generator pendingtocode
+
+72: IIFE
+//allows you to create and execute a function immediately after its definition. IIFE is commonly used to create a separate scope for variables, avoid polluting the global namespace, and encapsulate code.
+
+(function print(){
+    var a = 10;
+    console.log(a);
+})()
+
+// print();//no need to call 
+
+// (function f(){})() //iife syntax
+
+73:Destructuring
+let arr = [10,20,30];
+let [a,b] = arr;//arr length must be >=  to no variables else extra variables wont be initialised
+console.log(a,b);//10 20
+
+// let brr = [1,2,3,4,5,6];
+// let [p, ...rest ]=brr;
+// console.log(p,rest) //1 [2,3,4,5,6]
+
+let brr = [1,2,3,4,5,6];
+let [p, , ,...rest ]=brr;
+console.log(p,rest) //1 [,4,5,6]
+
+const obj = {a1:100,b1:200};
+const {a1,b1} = obj;
+console.log(a1,b1);//100 200
+
+74:spread 
+let arr = [3,2,4];
+let obj = {...arr};
+console.log(obj);//{0: 3, 1: 2, 2: 4}
+
+function sum(v1,v2,v3){
+    return v1+v2+v3;
+}
+
+console.log(sum(...arr));//9
+
+let obj2 = {
+    name:"kvk",
+    num:11
+}
+console.log({...obj2,num:22});//get obj2 then change num 
+
+75:Hoisting
+greet()
+function greet(){
+    console.log("hello");//hello
+}
+
+//error
+// greet()
+// var greet=()=>{
+//     console.log("hello");
+// }
+
+//error
+// greet()
+// let greet=()=>{
+//     console.log("hello");
+// }
+
+//other eg
+console.log(a);
+
+//2 cannot access 'a' before initialization 
+// let a;
+
+//1 undefined
+// var a;
+
+76:closures
+function init(){
+    var name = 'ki';
+    console.log('1');
+    function displayn(){
+        console.log(name);
+        console.log('2');
+    }
+    name = 'ka';
+    console.log('3');
+    return displayn;
+}
+
+let c=init();
+// 1
+// 3
+c();
+// ka
+// 2
+
+77:
+const obj = {
+    name:"kvk",
+    num:11,
+    show : function(){
+        // let that = this;
+        // console.log(this);
+        setTimeout( statement=()=>{
+            console.log(`${this.name} has lucky num ${this.num}`);//this refers to parent under arrow
+        },2000)
+    }
+}
+obj.show();
+console.log(obj.name);
+
+// const obj = {
+//     name:"kvk",
+//     num:11,
+//     show : function(){
+//         let that = this;
+//         console.log(this);
+//         setTimeout(function statement(){
+    
+//             console.log(`${that.name} has lucky num ${that.num}`);//this refers to current function
+//         },2000)
+//     }
+// }
+// obj.show();
+
+78: Alarm clock pendingtocode
+
+79:Modules 97 pendingtocode
+
+80:regex https://regexr.com/
+const regex = /very/g; //g global
+const test = "kvk is very very good very boy";
+
+// console.log(test.replace("very",'harry'));//only first occurence
+console.log(test.replace(regex,'harry'));//all occurence
+
+81:Event Loop
+callstack , web api,callback queue
+
+82:Project pendingtocode
+
+83:
+let a='kamal v kothari';
+console.log(a.indexOf('a'));//1
+console.log(a.lastIndexOf('a'));//12
+console.log(a.indexOf('p'));//-1
+let arrFromStr = a.split(' ');
+// let arrFromStr = a.split('a');
+console.log(arrFromStr);
+
+let arr = [10,20,30,20,1];
+console.log(arr.indexOf(20));//1
+console.log(arr.indexOf(120));//-1
+console.log(arr.lastIndexOf(20));//3
+let strFromArr = arr.join();//bydefault , 10,20,30,20,1
+// let strFromArr = arr.join('');//nospace all together 102030201 
+// let strFromArr = arr.join('-');//10-20-30-20-1
+console.log(strFromArr);
+
+//operator precedence & priority
+/*
+()
+**
+* / % L->R
++ - L->R
+*/
+
+84:
+function f(){ 
+// let f = function(){ //both will work
+    console.log('kkk');
+}
+f();
+
+let ageCalc = function(birthYear,currentYear=2023){     //default value in currentYear
+    let age = currentYear - birthYear;
+    console.log(age);
+}
+ageCalc(1999);//24
+ageCalc(1999,2001);//2
+
+85:
+let upper=(str)=>{
+    return str.toUpperCase();
+}
+
+let lower=(str)=>{
+    return str.toLowerCase();
+}
+
+// console.log(upper("HeLLo"));
+
+let trans = (str,opt)=>{
+    console.log(opt(str));
+}
+trans("KamaL",upper);//KAMAL
+
+86:
+let f = (name) => {
+    console.log(`my name is ${name}`)
+}
+
+setTimeout(f,5000,'kvk');
+// setTimeout(function,delay,arg1,ag2,...);
+setTimeout(f('vvs'),5000,'kvk');//wont obey timeout 
+// setTimeout(function with arg,2000);
+
+87:call apply bind 
+
+88:Pass by reference & Pass by value
+//reference
+let arr = [2,1,4,5];
+let arrByRef = arr;//both pointing to same array//passed by reference
+console.log(arr);
+console.log(arrByRef);
+arrByRef[0]=10;
+console.log(arr);
+console.log(arrByRef);
+
+//value
+let arr = [2,1,4,5];
+let arrByRef = [...arr];//passed by value //different copy
+console.log(arr);
+console.log(arrByRef);
+arrByRef[0]=10;
+console.log(arr);
+console.log(arrByRef);
+
+89:
+let p = document.querySelector('p');//p element .p class p #p id p
+p.style.background="red";
+let q = document.querySelectorAll('p');
+q.forEach((para)=>{
+    para.style.background="aqua";
+})
+// q.style.background="aqua";//wont work for multiple i.e wont work with querySelectorAll
+
+getAttribute & setAttribute  
+
+box.classList.add('newc');
+box.classList.remove('newc');
+box.classList.toggle('newc');
+box.classList.replace('newc','replaceNewc');
+
+
+90:bubbling & delegation
+
+91:form submit event
+
+92:array methods
+mutating 
+reverse,splice,
+
+non mutating
+concat,join,slice,flat default depth=1,
+
+93:
+let arr = [2,1,4,3];
+console.log(arr[-1]);//undefined
+console.log(arr.at(-1));//3 last element
+
+let str = "kamal K";
+console.log(str[-1]);//undefined
+console.log(str.at(-1));//last char
+
+find method in array : finds first element matching criteria
+findIndex : finds first element matching criteria and return its index
+
+some & every
+
+new Set()
+.size .add() .delete() .has() .clear()
+
+new Map()
+
+short circuit 
+in or || first true value
+in and && first false value
+nullish coalesing ??
+?. optional chaining
+
+Object.keys(obj)
+Object.values(obj)
+Object.entries(obj)
+
+94:frequency of every letter of word in object
+const obj = {
+    'a':1,
+    c:3
+}
+console.log('a' in obj)
+console.log('b' in obj)
+console.log(obj.a)
+
+
+let str = 'kamal v kothari';
+let result = {}
+for(let x of str)
+{
+    if(x in result){
+        // console.log('p');
+        // console.log(result.x);//this wont work because it will search for x as key
+        // console.log(result[x]);
+        result[x]=result[x]+1
+    }
+    else{
+        // console.log('a');
+        result[x]=1;
+    }
+}
+console.log(result)
+
+95:frequency of every word of sentence in object
+let str = 'kam vin kam kam kot vin';
+let arr = str.split(' ');
+let result = {}
+for(let x of arr)
+{
+    if(x in result){
+        result[x]++;
+    }
+    else{
+        result[x]=1;
+    }
+}
+console.log(result)
+
+96:fast map,filter & reduce
+//map
+let a = [1,3,2,5]
+a = a.map(num => num*2);//1 argument no need of (), 1 line without {} will return bydefault
+console.log(a);//[2, 6, 4, 10]
+
+//filter
+let b= [7,3,2,4,6].filter(num => {
+    if(num%2) return num;
+})
+
+console.log(b);
+
+console.log([7,3,2,4,6].filter(num => num%2))
+console.log([7,3,2,4,6].filter(num => num>=3))
+
+//reduce
+let b = [1,2,4,3].reduce((pre,next)=> pre+next);
+console.log(b)//10
+let c = [1,2,4,3].reduce((pre,next)=> pre*next);
+console.log(c)//24
+
+If the initial value is not provided, the first element of the array is used as the initial value and the reduction starts from the second element.
+
+let arr = [
+    {name:'kvk',marks:90},
+    {name:'ak',marks:30},
+    {name:'ad',marks:50},
+    {name:'jk',marks:40},
+]
+
+let total = arr.reduce((initial,each)=>initial+each.marks,0);//second arg 0 is initial value
+console.log(total)//210
+
+97:
+let one = document.querySelector('.stone');
+one.onclick = () => console.log('stone clicked');
+
+98:
+console.log("1");
+let mainDiv = document.getElementById('main'); 
+fetch('https://dog.ceo/api/breeds/image/random')
+.then(response => response.json())
+.then(json => {
+    console.log(json.message);
+    console.log(json);
+    mainDiv.innerHTML = `<img src="${json.message}" height=400 width=400 alt="">`
+})
+
+99:
+let mainDiv = document.getElementById("main");
+const getNewDog = () => {
+  fetch("https://dog.ceo/api/breeds/image/random")
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json.message);
+      console.log(json);
+      mainDiv.innerHTML = `<img src="${json.message}" height=400 width=400 alt="">`;
+    });
+};
+
+let b = document.getElementById("btn");
+b.onclick = () => getNewDog();
+
+100:
+class BankAccount{
+    constructor(name,balance){
+        this.name = name;
+        this.balance = balance;
+    }
+    deposit(inA){
+        console.log(`depositing ${inA} into bank`);
+        this.balance+=inA;
+        console.log(this.balance);
+    }
+    withdraw(outA){
+        if(this.balance>=outA)
+        {
+            console.log(`withdrawing ${outA} from bank`);
+            this.balance-=outA;
+            console.log(this.balance);
+        }
+        else{
+            console.log(`cannot withdraw ${outA} from bank`);
+            console.log(this.balance);
+        }
+    }
+}
+let obj = new BankAccount('kamal',200);
+console.log(obj)
+obj.deposit(100);
+obj.withdraw(150);
+obj.withdraw(100);
+obj.withdraw(100);
+
+let a = 100;
+console.log({a});//obj{a:100}
+
+101:object & array are passed by reference, in primitive passed by value (independent)
+
+let c=[1,2];//ox01
+let d=[1,2];//ox02
+console.log(c===d,c==d);//f f 
+
+let a=[1,2];
+let b=a;//ox01
+console.log(a===b,a==b);//t t
+
+102:
+<button id="btn" onclick="
+    console.log('btn clk');
+    console.log('thanks');
+    ">get new dog</button>
+
+
+<body>
+    <button onclick="print(num)">show</button>
+    <button onclick="
+      num++;
+      print(num);
+    ">add</button>
+    <button onclick="
+      num+=2;
+      print(num);
+    ">+2</button>
+    <button onclick="
+      num=0;
+      console.log('reseting');
+      print(num);
+    ">reset</button>
+    <script src="script.js"></script>
+  </body>
+
+103:
+false: The boolean value false is inherently falsy.
+
+0: The number 0 (zero) is considered falsy.
+
+'': An empty string ('') is considered falsy.
+
+null: The value null represents the absence of any object and is considered falsy.
+
+undefined: The value undefined represents the absence of a defined value and is considered falsy.
+
+NaN: The value NaN (Not a Number) is considered falsy. It represents a value that is not a valid number
+
+104:
+let btn = document.querySelector('button');
+btn.onclick = () => {
+    btn.innerHTML = btn.innerHTML==='Subscribe' ? 'Subscribed your channel' : 'Subscribe';
+}
+
+innerHTML will detect spaces and new lines ' Subscribe' != 'Subscribe'
+innerText will not detect spaces and new lines ' Subscribe' == 'Subscribe'
+
+105:
+console.log(2+3+"hi");//5hi
+console.log("hi"+2+3);//hi23
+
+106:
+how to store array in localStorage
+JSON.stringify()
+JSON.parse()
+
+107:
+console.log(1==true)//t
+console.log('1'==true)//t
+console.log(2==true)//f
+
+108:
+let box=document.querySelector('#box');
+// window.addEventListener("keydown",e=>console.log(e.key))
+window.addEventListener("keydown",move)
+
+let x=0,y=0
+function move(event){
+    switch(event.key)
+    {
+        case "ArrowDown":
+            y+=5;
+            box.style.top=y+"px";
+            break;
+        case "ArrowUp":
+            y-=5;
+            box.style.top=y+"px";
+            break;
+        case "ArrowLeft":
+            x-=5;
+            box.style.left=x+"px";
+            break;
+        case "ArrowRight":
+            x+=5;
+            box.style.left=x+"px";
+            break;
+
+    }
+}
+
+#box{
+    background: aqua;
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    /* imp */
+    position: relative;
+}
+
+109:comma operator
+// let a =2,b=3,c=4;
+// let r;
+// r = a++, b++ , c++;
+// console.log(a,b,c,r);//3 4 5 2
+let a =2,b=3,c=4;
+let r;
+r = (a++, b++ , c++);
+console.log(a,b,c,r);//3 4 5 4
+
+110:
+Grouping: ( )
+Member Access: . (dot notation), [ ] (bracket notation)
+Function Call and Arguments: ( )
+Increment/Decrement: ++, --
+Logical NOT: !
+Multiplication, Division, and Remainder: *, /, %
+Addition and Subtraction: +, -
+Relational Operators: <, >, <=, >=, instanceof, in
+Equality Operators: ==, !=, ===, !==
+Logical AND: &&
+Logical OR: ||
+Conditional (Ternary) Operator: ? :
+Assignment Operators: =, +=, -=, *=, /=, %=, <<=, >>=, >>>=, &=, ^=, |=
+Comma Operator: ,
+
+111:
+112:
+113:
+114:
+115:
+116:
+117:
+118:
+119:
+120:
+121:
+122:
+123:
+124:
+125:
+126:
+127:
+128:
+129:
+130:
